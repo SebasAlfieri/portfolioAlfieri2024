@@ -1,0 +1,12 @@
+.container {
+  background-color: var(--gray0);
+  height: 100%;
+  min-height: 200vh;
+  color: white;
+  /* overflow-y: scroll; */
+  color: red;
+
+  p {
+    height: 100px;
+  }
+}

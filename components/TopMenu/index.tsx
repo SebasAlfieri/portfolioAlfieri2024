@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import s from "./TopMenu.module.css";
+import { ReactSVG } from "react-svg";
 
 const TopMenu = () => {
   return (
@@ -14,6 +15,11 @@ const TopMenu = () => {
         </p>
       </motion.div>
       <div className={s.container__search}>
+        <ReactSVG
+          src="/icons/magnifying.svg"
+          wrapper="span"
+          className={s.container__search__icon}
+        />
         <p>sebastian-alfieri</p>
       </div>
     </motion.div>

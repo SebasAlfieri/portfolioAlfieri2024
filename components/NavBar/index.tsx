@@ -7,14 +7,14 @@ import { navigation } from "@/lib/dataset";
 import { NavItem } from "@/components";
 
 type Props = {
-  active: number;
-  setActive: (id: number) => void;
+  active: string;
+  setActive: (link: string) => void;
 };
 
 const NavBar = ({ active, setActive }: Props) => {
-  const handleClick = (id: number) => {
-    setActive(id);
-    console.log(id);
+  const handleClick = (link: string) => {
+    setActive(link);
+    console.log(link);
   };
 
   return (
@@ -23,8 +23,8 @@ const NavBar = ({ active, setActive }: Props) => {
         <NavItem
           key={`${item.label}${item.id}`}
           label={item.label}
-          onClick={() => handleClick(item.id)}
-          active={active === item.id}
+          onClick={() => handleClick(item.link)}
+          active={active === item.link}
         />
       ))}
     </nav>

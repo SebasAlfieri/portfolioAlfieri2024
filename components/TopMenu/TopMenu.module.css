@@ -1,12 +1,14 @@
 .container {
   position: relative;
   padding: 10px 10px;
-  /* border-top-left-radius: 7px;
-  border-top-right-radius: 7px; */
   display: flex;
   background-color: var(--black0);
   &__system {
     font-family: var(--consolas) !important;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     & p {
       display: inline-block;
       font-size: 16px;
@@ -26,6 +28,10 @@
 
   &__search {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -35,5 +41,22 @@
     border: 1px solid var(--light-grey);
     width: 200px;
     text-align: center;
+
+    &__icon {
+      /* position: absolute; */
+      position: relative;
+      height: 15px;
+      width: auto;
+      top: -2px;
+      transform: scaleX(-1);
+
+      & svg {
+        height: 100%;
+        width: auto;
+        & path {
+          stroke: var(--light-grey) !important;
+        }
+      }
+    }
   }
 }

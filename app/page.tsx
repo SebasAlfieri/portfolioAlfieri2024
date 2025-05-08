@@ -3,10 +3,8 @@ import Navigation from "@/components/Navigation";
 export default function Home() {
   return (
     <main>
-      <section>
-        <TopMenu />
-        <Navigation />
-      </section>
+      <TopMenu />
+      <Navigation />
     </main>
   );
 }

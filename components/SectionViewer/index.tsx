@@ -4,12 +4,12 @@ import SectionProfile from "../SectionProfile";
 import SectionProjects from "../SectionProjects";
 import SectionContact from "../SectionContact";
 
-const SectionViewer = ({ section }: { section: number }) => {
+const SectionViewer = ({ section }: { section: string }) => {
   return (
     <div className={s.container}>
-      {section === 1 && <SectionProfile />}
-      {section === 2 && <SectionProjects />}
-      {section === 3 && <SectionContact />}
+      {section === "profile" && <SectionProfile />}
+      {section === "personal-info" && <SectionProjects />}
+      {section === "contact" && <SectionContact />}
     </div>
   );
 };

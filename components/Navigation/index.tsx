@@ -8,17 +8,17 @@ import { NavBar, SectionViewer } from "@/components";
 const Navigation = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const section = Number(searchParams.get("section")) || 1;
+  const section = searchParams.get("section") || "profile";
 
-  const setActive = (query: number) => {
-    router.push(`?section=${query}`);
+  const setActive = (link: string) => {
+    router.push(`?section=${link}`);
   };
 
   return (
-    <motion.div className={s.container}>
+    <motion.article className={s.container}>
       <NavBar active={section} setActive={setActive} />
       <SectionViewer section={section} />
-    </motion.div>
+    </motion.article>
   );
 };
 
