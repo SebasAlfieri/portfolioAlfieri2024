@@ -1,0 +1,32 @@
+.container {
+  padding: 10px 20px 15px 20px;
+  width: fit-content;
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+  background-color: var(--black0);
+  color: gray;
+  gap: 10px;
+  border-top: 1px solid transparent;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+
+  &__active {
+    border-top: 1px solid var(--blue);
+    background-color: var(--gray0);
+  }
+
+  &__icon {
+    position: relative;
+    top: 1px;
+    fill: rgb(165, 115, 115);
+    width: 17px;
+    height: 17px;
+
+    & svg {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}

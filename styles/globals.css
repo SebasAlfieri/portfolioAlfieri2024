@@ -2,7 +2,17 @@
 :root {
   /* Definir todas las variables de color acá */
   --white: #ffffff;
-  --black: #000000;
+  --light-grey: #cccccc;
+  --black0: #181818;
+  --gray0: #1f1f1f;
+  --gray1: #232323;
+  --blue: #559adb;
+  --light-blue: #54c5fd;
+  --lighter-blue: #aae8ff;
+  --orange: #d1937c;
+  --pink: #df70d7;
+  --yellow: #d5b107;
+  --green: #67a059;
 
   --retina-value: 3;
 }
@@ -52,9 +62,9 @@ body {
   line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* font-family: var(--consolas) !important; */
 
   /* iPhone styles */
   @supports (-webkit-touch-callout: none) {

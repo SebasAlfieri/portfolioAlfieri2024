@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  width: 100%;
+  overflow: scroll;
+  background-color: var(--black0);
+  border-top: 1px solid var(--gray0);
+
+  @media (--large) {
+    overflow: unset;
+  }
+}

@@ -1,0 +1,39 @@
+.container {
+  position: relative;
+  padding: 10px 10px;
+  /* border-top-left-radius: 7px;
+  border-top-right-radius: 7px; */
+  display: flex;
+  background-color: var(--black0);
+  &__system {
+    font-family: var(--consolas) !important;
+    & p {
+      display: inline-block;
+      font-size: 16px;
+      display: flex;
+      gap: 5px;
+      & :nth-child(1) {
+        color: #fc5e56;
+      }
+      & :nth-child(2) {
+        color: #fabd28;
+      }
+      & :nth-child(3) {
+        color: #1bc93d;
+      }
+    }
+  }
+
+  &__search {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--gray1);
+    color: var(--light-grey);
+    border-radius: 5px;
+    border: 1px solid var(--light-grey);
+    width: 200px;
+    text-align: center;
+  }
+}

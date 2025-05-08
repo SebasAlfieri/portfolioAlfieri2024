@@ -1,5 +1,12 @@
-import s from "@/styles/page.module.css";
-
+import { TopMenu } from "@/components";
+import Navigation from "@/components/Navigation";
 export default function Home() {
-  return <main className={s.container}>index</main>;
+  return (
+    <main>
+      <section>
+        <TopMenu />
+        <Navigation />
+      </section>
+    </main>
+  );
 }
