@@ -17,6 +17,7 @@ const SectionContact = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.1 }}
+          className={s.helper}
         >
           <h2>Contact me</h2>
           <div className={s.container__buttons}>

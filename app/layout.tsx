@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     url: "https://subelealamexcla.byspotify.com",
     images: [
       {
-        url: "image/opengraph.jpg",
+        url: "/images/opengraph.jpg",
         width: 600,
         height: 600,
         alt: "me",
       },
       {
-        url: "image/opengraph.jpg",
+        url: "/images/opengraph.jpg",
         width: 1080,
         height: 1080,
         alt: "me",
