@@ -3,7 +3,7 @@
   overflow-y: scroll;
   background-color: var(--gray0);
   color: white;
-  padding: 20px;
+  padding: 10px 10px 20px 10px;
 
   scrollbar-width: thin;
   scrollbar-color: #424242 #1e1e1e;

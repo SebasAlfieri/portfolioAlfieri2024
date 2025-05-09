@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import s from "./SectionContact.module.css";
+import LineNumbers from "../LineNumbers";
 
 const SectionContact = () => {
   return (
@@ -10,7 +11,7 @@ const SectionContact = () => {
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3 }}
     >
-      contact
+      <LineNumbers>contact</LineNumbers>
     </motion.div>
   );
 };

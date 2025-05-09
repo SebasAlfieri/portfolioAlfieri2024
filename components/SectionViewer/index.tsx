@@ -8,7 +8,7 @@ const SectionViewer = ({ section }: { section: string }) => {
   return (
     <div className={s.container}>
       {section === "profile" && <SectionProfile />}
-      {section === "personal-info" && <SectionProjects />}
+      {section === "projects" && <SectionProjects />}
       {section === "contact" && <SectionContact />}
     </div>
   );

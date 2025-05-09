@@ -7,3 +7,14 @@ export interface navigationDataSetType {
   label: string;
   link: string;
 }
+
+export type DataSetExperienceType = {
+  items: experiencesDataSetType[];
+};
+
+export interface experiencesDataSetType {
+  company: string;
+  role: string;
+  info: string;
+  dates: string;
+}

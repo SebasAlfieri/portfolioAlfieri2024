@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import s from "./SectionProjects.module.css";
+import LineNumbers from "../LineNumbers";
 
 const SectionProjects = () => {
   return (
@@ -10,7 +11,7 @@ const SectionProjects = () => {
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3 }}
     >
-      projects
+      <LineNumbers>projects</LineNumbers>
     </motion.div>
   );
 };
