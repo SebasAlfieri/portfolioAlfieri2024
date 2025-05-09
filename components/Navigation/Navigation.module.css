@@ -3,7 +3,10 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  /* overflow-y: scroll; */
+
+  @media (--large) {
+    overflow: hidden;
+  }
 }
 
 .container > *:last-child {

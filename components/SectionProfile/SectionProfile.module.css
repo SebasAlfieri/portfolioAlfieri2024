@@ -1,12 +1,19 @@
 .container {
-  background-color: var(--gray0);
   height: 100%;
-  min-height: 200vh;
   color: white;
-  /* overflow-y: scroll; */
-  color: red;
 
-  p {
-    height: 100px;
+  &__topside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+    &__image {
+      width: 100px;
+      height: auto;
+    }
+
+    &__text {
+    }
   }
 }
