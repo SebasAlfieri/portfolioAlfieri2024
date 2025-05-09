@@ -12,6 +12,10 @@
   align-items: center;
   transition: 0.7s;
 
+  @media (--large) {
+    min-width: 150px;
+  }
+
   &__active {
     border-top: 1px solid var(--blue);
     background-color: var(--gray0);

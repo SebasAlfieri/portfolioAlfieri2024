@@ -3,6 +3,43 @@
   color: white;
   font-family: var(--consolas);
   /* font-weight: 100 !important; */
+  position: relative;
+
+  &__cv {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10px;
+    top: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    /* background-color: var(--blue); */
+    border: 2px solid var(--blue);
+    background-color: transparent;
+    color: var(--orange);
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+
+    @media (hover: hover) {
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      opacity: 0;
+      content: "// Download";
+      white-space: nowrap;
+      position: absolute;
+      bottom: -30px;
+      left: -40px;
+      color: var(--green);
+      transition: 0.3s;
+    }
+  }
 
   & h1 {
     /* font-weight: 100; */
@@ -35,6 +72,7 @@
   &__data {
     display: flex;
     flex-direction: column;
+    padding-bottom: 50px;
 
     & h3 {
       margin-bottom: 10px;

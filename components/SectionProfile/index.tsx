@@ -13,6 +13,9 @@ const SectionProfile = () => {
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3 }}
     >
+      <a href="/CV-SEBASTIAN-ALFIERI.PDF" download className={s.container__cv}>
+        CV
+      </a>
       <LineNumbers>
         <h1>Front End Developer</h1>
         <div className={s.container__topside}>

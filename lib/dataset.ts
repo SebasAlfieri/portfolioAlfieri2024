@@ -62,14 +62,6 @@ export const projects: DataSetProjectsType = {
     },
     {
       company: 2,
-      name: "Ventas Marevera",
-      description:
-        "A sales-oriented web platform designed for both internal employees and external clients. Employees can manage users, process sales, generate PDFs, and send emails. Clients access a guest section where they can explore available lots and send information requests via email.",
-      technologies: ["NextJs", "TypeScript", "Strapi", "API", "HubSpot"],
-      link: "https://ventas.marevera.com/guest/",
-    },
-    {
-      company: 2,
       name: "Ventas Terralago",
       description:
         "A sales-oriented web platform designed for both internal employees and external clients. Employees can manage users, process sales, generate PDFs, and send emails. Clients access a guest section where they can explore available lots and send information requests via email.",

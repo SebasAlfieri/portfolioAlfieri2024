@@ -8,27 +8,23 @@ interface LineNumbersProps {
 
 const LineNumbers: React.FC<LineNumbersProps> = ({ children }) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
   const [numberOfLines, setNumberOfLines] = useState(0);
 
   useEffect(() => {
-    if (!containerRef.current) return;
-
     const updateLineCount = () => {
-      const viewportHeight = window.innerHeight;
-      const containerHeight = containerRef.current?.offsetHeight || 0;
-      const lineHeight = 24; // altura de cada línea en píxeles
-      const minLines = Math.ceil(viewportHeight / lineHeight);
-      const lines = Math.max(minLines, Math.ceil(containerHeight / lineHeight));
+      const lineHeight = 24; // o el valor real de tu CSS
+      const contentHeight = contentRef.current?.scrollHeight || 0;
+      const lines = Math.ceil(contentHeight / lineHeight);
       setNumberOfLines(lines);
     };
 
+    if (!contentRef.current) return;
+
     const resizeObserver = new ResizeObserver(updateLineCount);
-    resizeObserver.observe(containerRef.current);
+    resizeObserver.observe(contentRef.current);
 
-    // Actualizar cuando cambie el tamaño de la ventana
     window.addEventListener("resize", updateLineCount);
-
-    // Actualizar inicialmente
     updateLineCount();
 
     return () => {
@@ -46,7 +42,9 @@ const LineNumbers: React.FC<LineNumbersProps> = ({ children }) => {
           </div>
         ))}
       </div>
-      <div className={s.content}>{children}</div>
+      <div className={s.content} ref={contentRef}>
+        {children}
+      </div>
     </div>
   );
 };

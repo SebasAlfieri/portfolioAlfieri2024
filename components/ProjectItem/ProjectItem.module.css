@@ -4,12 +4,19 @@
   text-align: center;
   /* min-height: 350px; */
   display: flex;
-  position: relative; /* Para permitir el uso de absolute dentro de él */
+  position: relative;
   background-color: transparent;
 
+  @media (hover: hover) {
+    &:hover {
+      color: var(--pink) !important;
+    }
+  }
+
   &__lineNumbers {
+    display: none;
     position: absolute;
-    top: -40px;
+    top: -20px;
     left: 0;
     font-family: monospace;
     font-size: 14px;
@@ -17,17 +24,19 @@
 
     display: flex;
     flex-direction: column;
-    gap: 4px; /* Espacio entre cada línea */
-    padding-left: 10px; /* Separación con el borde */
-    padding-top: 20px; /* Alineación vertical */
+    gap: 4px;
+    padding-left: 10px;
+    padding-top: 20px;
 
     &__line {
       white-space: nowrap;
+      line-height: 20px;
+      height: 20px;
     }
   }
 
   &__project {
-    padding-left: 50px; /* Deja espacio para las líneas // */
+    padding-left: 50px;
     text-align: left;
     display: flex;
     flex-direction: column;

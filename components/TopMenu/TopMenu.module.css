@@ -3,6 +3,10 @@
   padding: 10px 10px;
   display: flex;
   background-color: var(--black0);
+
+  @media (--large) {
+    padding: 15px 15px;
+  }
   &__system {
     font-family: var(--consolas) !important;
     user-select: none;
@@ -14,6 +18,10 @@
       font-size: 16px;
       display: flex;
       gap: 5px;
+
+      @media (--large) {
+        font-size: 20px;
+      }
       & :nth-child(1) {
         color: #fc5e56;
       }
@@ -41,6 +49,11 @@
     border: 1px solid var(--light-grey);
     width: 200px;
     text-align: center;
+
+    @media (--large) {
+      width: 300px;
+      height: 1px;
+    }
 
     &__icon {
       /* position: absolute; */
