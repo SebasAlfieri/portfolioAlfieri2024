@@ -52,7 +52,6 @@
 
     @media (--large) {
       width: 300px;
-      height: 1px;
     }
 
     &__icon {
