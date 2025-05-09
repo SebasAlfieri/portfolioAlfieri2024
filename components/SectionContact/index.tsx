@@ -11,61 +11,62 @@ const SectionContact = () => {
   };
 
   return (
-    <motion.section
-      className={s.container}
-      // initial={{ opacity: 0 }}
-      // animate={{ opacity: 1 }}
-      // transition={{ delay: 0.3 }}
-    >
+    <motion.section className={s.container}>
       <LineNumbers>
-        <h2>Contact me</h2>
-        <div className={s.container__buttons}>
-          <button
-            className={s.container__buttons__wsp}
-            onClick={() => handleLink("https://wa.me/5491122251843")}
-          >
-            <ReactSVG
-              src="/icons/whatsapp.svg"
-              wrapper="span"
-              className={s.container__buttons__wsp__icon}
-            />
-          </button>
-          <button
-            className={s.container__buttons__email}
-            onClick={() => handleLink("mailto:sebasalfieri@gmail.com")}
-          >
-            {" "}
-            <ReactSVG
-              src="/icons/email.svg"
-              wrapper="span"
-              className={s.container__buttons__email__icon}
-            />
-          </button>
-          <button
-            className={s.container__buttons__github}
-            onClick={() => handleLink("https://github.com/SebasAlfieri")}
-          >
-            {" "}
-            <ReactSVG
-              src="/icons/github.svg"
-              wrapper="span"
-              className={s.container__buttons__github__icon}
-            />
-          </button>
-          <button
-            className={s.container__buttons__linkedin}
-            onClick={() =>
-              handleLink("https://www.linkedin.com/in/sebastianalfieri/")
-            }
-          >
-            {" "}
-            <ReactSVG
-              src="/icons/linkedin.svg"
-              wrapper="span"
-              className={s.container__buttons__linkedin__icon}
-            />
-          </button>
-        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.1 }}
+        >
+          <h2>Contact me</h2>
+          <div className={s.container__buttons}>
+            <button
+              className={s.container__buttons__wsp}
+              onClick={() => handleLink("https://wa.me/5491122251843")}
+            >
+              <ReactSVG
+                src="/icons/whatsapp.svg"
+                wrapper="span"
+                className={s.container__buttons__wsp__icon}
+              />
+            </button>
+            <button
+              className={s.container__buttons__email}
+              onClick={() => handleLink("mailto:sebasalfieri@gmail.com")}
+            >
+              {" "}
+              <ReactSVG
+                src="/icons/email.svg"
+                wrapper="span"
+                className={s.container__buttons__email__icon}
+              />
+            </button>
+            <button
+              className={s.container__buttons__github}
+              onClick={() => handleLink("https://github.com/SebasAlfieri")}
+            >
+              {" "}
+              <ReactSVG
+                src="/icons/github.svg"
+                wrapper="span"
+                className={s.container__buttons__github__icon}
+              />
+            </button>
+            <button
+              className={s.container__buttons__linkedin}
+              onClick={() =>
+                handleLink("https://www.linkedin.com/in/sebastianalfieri/")
+              }
+            >
+              {" "}
+              <ReactSVG
+                src="/icons/linkedin.svg"
+                wrapper="span"
+                className={s.container__buttons__linkedin__icon}
+              />
+            </button>
+          </div>
+        </motion.div>
       </LineNumbers>
     </motion.section>
   );
