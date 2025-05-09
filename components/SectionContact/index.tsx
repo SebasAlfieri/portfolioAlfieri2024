@@ -5,14 +5,14 @@ import LineNumbers from "../LineNumbers";
 
 const SectionContact = () => {
   return (
-    <motion.div
+    <motion.section
       className={s.container}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.3 }}
     >
       <LineNumbers>contact</LineNumbers>
-    </motion.div>
+    </motion.section>
   );
 };
 

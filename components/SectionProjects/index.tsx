@@ -1,18 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
 import s from "./SectionProjects.module.css";
-import LineNumbers from "../LineNumbers";
+import { LineNumbers, ProjectItem } from "@/components";
+import { projects } from "@/lib/dataset";
 
 const SectionProjects = () => {
   return (
-    <motion.div
+    <motion.section
       className={s.container}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.3 }}
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // transition={{ delay: 0.3 }}
     >
-      <LineNumbers>projects</LineNumbers>
-    </motion.div>
+      <LineNumbers>
+        <h2>Some Projects</h2>
+        <article className={s.container__projects}>
+          {projects.items.map((item) => (
+            <ProjectItem key={item.link} {...item} />
+          ))}
+        </article>
+      </LineNumbers>
+    </motion.section>
   );
 };
 

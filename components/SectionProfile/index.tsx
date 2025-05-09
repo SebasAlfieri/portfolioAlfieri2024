@@ -58,6 +58,7 @@ const SectionProfile = () => {
               <li>
                 Api Integrations<span>,</span>
               </li>
+              <li>Metrics</li>
             </ul>
           </article>
           <article className={s.container__data__experience}>

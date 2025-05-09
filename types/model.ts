@@ -18,3 +18,15 @@ export interface experiencesDataSetType {
   info: string;
   dates: string;
 }
+
+export interface DataSetProjectsType {
+  items: projectsDataSetType[];
+}
+
+export interface projectsDataSetType {
+  link: string;
+  name: string;
+  description: string;
+  technologies: string[];
+  company: number;
+}
