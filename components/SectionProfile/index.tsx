@@ -14,9 +14,9 @@ const SectionProfile = () => {
 
   return (
     <motion.section className={s.container}>
-      {/* <a href="/cv-sebastian-alfieri.pdf" download className={s.container__cv}>
+      <a href="/test.pdf" download>
         CV
-      </a> */}
+      </a>
       <button onClick={() => handleDownload()} className={s.container__cv}>
         CV
       </button>
