@@ -4,16 +4,17 @@ import s from "./SectionProfile.module.css";
 import Image from "next/image";
 import { LineNumbers } from "@/components";
 import { experience } from "@/lib/dataset";
+import { saveAs } from "file-saver";
 
 const SectionProfile = () => {
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/cv-sebastian-alfieri.pdf";
-    link.setAttribute("download", "");
-    link.setAttribute("target", "_blank");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const handleDownload = async () => {
+    try {
+      const response = await fetch("/cv-sebastian-alfieri.pdf");
+      const blob = await response.blob();
+      saveAs(blob, "cv-sebastian-alfieri.pdf");
+    } catch (error) {
+      console.error("Error downloading file:", error);
+    }
   };
 
   return (
