@@ -8,7 +8,7 @@ import { experience } from "@/lib/dataset";
 const SectionProfile = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/cv-sebastian-alfieri.pdf";
+    link.href = `${window.location.origin}/cv-sebastian-alfieri.pdf`;
     link.download = "cv-sebastian-alfieri.pdf";
     document.body.appendChild(link);
     link.click();
