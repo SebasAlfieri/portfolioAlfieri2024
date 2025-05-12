@@ -8,7 +8,7 @@ import { experience } from "@/lib/dataset";
 const SectionProfile = () => {
   return (
     <motion.section className={s.container}>
-      <a href="/test.pdf" download className={s.container__cv}>
+      <a href="/CV-SEBASTIAN-ALFIERI.pdf" download className={s.container__cv}>
         CV
       </a>
       <LineNumbers>
