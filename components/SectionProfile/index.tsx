@@ -4,22 +4,13 @@ import s from "./SectionProfile.module.css";
 import Image from "next/image";
 import { LineNumbers } from "@/components";
 import { experience } from "@/lib/dataset";
-import { saveAs } from "file-saver";
 
 const SectionProfile = () => {
-  const handleDownload = () => {
-    const url = `${window.location.origin}/cv-sebastian-alfieri.pdf`;
-    saveAs(url, "cv-sebastian-alfieri.pdf");
-  };
-
   return (
     <motion.section className={s.container}>
-      <a href="/test.pdf" download>
+      <a href="/test.pdf" download className={s.container__cv}>
         CV
       </a>
-      <button onClick={() => handleDownload()} className={s.container__cv}>
-        CV
-      </button>
       <LineNumbers>
         <motion.div
           initial={{ opacity: 0 }}
