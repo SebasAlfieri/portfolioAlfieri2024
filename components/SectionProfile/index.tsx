@@ -6,11 +6,23 @@ import { LineNumbers } from "@/components";
 import { experience } from "@/lib/dataset";
 
 const SectionProfile = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/cv-sebastian-alfieri.pdf";
+    link.download = "cv-sebastian-alfieri.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <motion.section className={s.container}>
-      <a href="/cv-sebastian-alfieri.pdf" download className={s.container__cv}>
+      {/* <a href="/cv-sebastian-alfieri.pdf" download className={s.container__cv}>
         CV
-      </a>
+      </a> */}
+      <button onClick={() => handleDownload()} className={s.container__cv}>
+        CV
+      </button>
       <LineNumbers>
         <motion.div
           initial={{ opacity: 0 }}
@@ -44,24 +56,24 @@ const SectionProfile = () => {
                   (<em>+2years experience</em>)
                 </span>
                 <li>
-                  JavaScript<span>,</span>
+                  &quot;JavaScript&quot;<span>,</span>
                 </li>
                 <li>
-                  ReactJs<span>,</span>
+                  &quot;ReactJs&quot;<span>,</span>
                 </li>
                 <li>
-                  NextJs<span>,</span>
+                  &quot;NextJs&quot;<span>,</span>
                 </li>
                 <li>
-                  TypeScript<span>,</span>
+                  &quot;TypeScript&quot;<span>,</span>
                 </li>
                 <li>
-                  NextJs<span>,</span>
+                  &quot;NextJs&quot;<span>,</span>
                 </li>
                 <li>
-                  Api Integrations<span>,</span>
+                  &quot;Api Integrations&quot;<span>,</span>
                 </li>
-                <li>Metrics</li>
+                <li>&quot;Metrics&quot;</li>
               </ul>
             </article>
             <article className={s.container__data__experience}>
