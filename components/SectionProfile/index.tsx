@@ -7,14 +7,9 @@ import { experience } from "@/lib/dataset";
 import { saveAs } from "file-saver";
 
 const SectionProfile = () => {
-  const handleDownload = async () => {
-    try {
-      const response = await fetch("/cv-sebastian-alfieri.pdf");
-      const blob = await response.blob();
-      saveAs(blob, "cv-sebastian-alfieri.pdf");
-    } catch (error) {
-      console.error("Error downloading file:", error);
-    }
+  const handleDownload = () => {
+    const url = `${window.location.origin}/cv-sebastian-alfieri.pdf`;
+    saveAs(url, "cv-sebastian-alfieri.pdf");
   };
 
   return (
