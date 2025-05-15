@@ -80,7 +80,7 @@
     }
 
     &__knowledges {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     & article {
@@ -130,6 +130,11 @@
 
         &__sign {
           color: var(--yellow) !important;
+
+          & p {
+            display: inline-block;
+            color: var(--white);
+          }
         }
 
         & ul {
@@ -149,4 +154,8 @@
       }
     }
   }
+}
+
+.equal {
+  color: var(--white) !important;
 }

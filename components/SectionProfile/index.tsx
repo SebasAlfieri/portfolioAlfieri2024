@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import s from "./SectionProfile.module.css";
 import Image from "next/image";
 import { LineNumbers } from "@/components";
-import { experience } from "@/lib/dataset";
+import { experience, skills } from "@/lib/dataset";
 
 const SectionProfile = () => {
   return (
@@ -41,36 +41,24 @@ const SectionProfile = () => {
               <ul>
                 Knowledges{" "}
                 <span>
-                  (<em>+2years experience</em>)
+                  (<em>+2years experience</em>){" "}
+                  <span className={s.equal}>=</span>
+                  {" ["}
                 </span>
-                <li>
-                  &quot;JavaScript&quot;<span>,</span>
-                </li>
-                <li>
-                  &quot;ReactJs&quot;<span>,</span>
-                </li>
-                <li>
-                  &quot;NextJs&quot;<span>,</span>
-                </li>
-                <li>
-                  &quot;TypeScript&quot;<span>,</span>
-                </li>
-                <li>
-                  &quot;NextJs&quot;<span>,</span>
-                </li>
-                <li>
-                  &quot;Api Integrations&quot;<span>,</span>
-                </li>
-                <li>&quot;Metrics&quot;</li>
+                {skills.items.map((skill, index) => (
+                  <li key={skill.id}>
+                    &quot;{skill.name}&quot;
+                    {index < skills.items.length - 1 && <span>,</span>}
+                  </li>
+                ))}
+                <span>{"]"}</span>
               </ul>
             </article>
             <article className={s.container__data__experience}>
               <ul>
-                Experiences{" "}
-                {/* <span>
-                (<em>+2years experience</em>)
-              </span> */}
-                {experience.items.map((item) => (
+                Experiences <span className={s.equal}>=</span>
+                <span>{" ["}</span>
+                {experience.items.map((item, index) => (
                   <li
                     key={item.company}
                     className={s.container__data__experience__first}
@@ -99,11 +87,13 @@ const SectionProfile = () => {
                         className={s.container__data__experience__first__sign}
                       >
                         {"}"}
+                        {index < experience.items.length - 1 && <p>,</p>}
                       </span>
                     </ul>
                     {/* <br /> */}
                   </li>
-                ))}
+                ))}{" "}
+                <span>{"]"}</span>
               </ul>
             </article>
           </div>

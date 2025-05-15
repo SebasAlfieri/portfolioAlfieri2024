@@ -2,10 +2,7 @@ import {
   DataSetNavigationType,
   DataSetExperienceType,
   DataSetProjectsType,
-  // FaqDataType,
-  // SocialsDataType,
-  // NominatedsDataType,
-  // DataSetSponsorsType
+  DataSetSkillsType,
 } from "@/types/model";
 
 export const navigation: DataSetNavigationType = {
@@ -13,6 +10,17 @@ export const navigation: DataSetNavigationType = {
     { id: 1, label: "Profile", link: "profile" },
     { id: 2, label: "Projects", link: "projects" },
     { id: 3, label: "Contact", link: "contact" },
+  ],
+};
+
+export const skills: DataSetSkillsType = {
+  items: [
+    { id: 1, name: "JavaScript", category: "Language" },
+    { id: 2, name: "ReactJs", category: "Framework" },
+    { id: 3, name: "NextJs", category: "Framework" },
+    { id: 4, name: "RESTful APIs", category: "API" },
+    { id: 5, name: "TypeScript", category: "Language" },
+    { id: 6, name: "Google Analytics", category: "Other" },
   ],
 };
 

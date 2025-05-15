@@ -30,3 +30,11 @@ export interface projectsDataSetType {
   technologies: string[];
   company: number;
 }
+
+export type DataSetSkillsType = {
+  items: {
+    id: number;
+    name: string;
+    category?: string; // opcional, si después querés agrupar
+  }[];
+};
