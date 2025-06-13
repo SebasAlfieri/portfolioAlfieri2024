@@ -21,7 +21,7 @@ const SectionProfile = () => {
           <div className={s.container__topside}>
             <Image
               className={s.container__topside__image}
-              src={"/images/me-pixelated.jpg"}
+              src={"/images/me.jpg"}
               width={1199}
               height={900}
               alt="Me, hello!"
