@@ -5,7 +5,7 @@
   position: relative;
   display: flex;
   background-color: var(--black0);
-  color: gray;
+  color: var(--light-grey);
   gap: 10px;
   border-top: 1px solid transparent;
   justify-content: center;

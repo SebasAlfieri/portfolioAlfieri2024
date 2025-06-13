@@ -23,7 +23,8 @@
 }
 
 .lineNumber {
-  color: #858585;
+  /* color: #858585; */
+  color: #9b9b9b;
   font-size: 12px;
   padding-right: 10px;
   text-align: right;
@@ -32,4 +33,5 @@
   line-height: 1.5em;
   flex: 1;
   min-height: 24px;
+  filter: contrast(200%);
 }

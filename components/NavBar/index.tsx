@@ -14,7 +14,6 @@ type Props = {
 const NavBar = ({ active, setActive }: Props) => {
   const handleClick = (link: string) => {
     setActive(link);
-    console.log(link);
   };
 
   return (

@@ -20,6 +20,17 @@ export const skills: DataSetSkillsType = {
     { id: 3, name: "NextJs", category: "Framework" },
     { id: 4, name: "RESTful APIs", category: "API" },
     { id: 5, name: "TypeScript", category: "Language" },
+    { id: 6, name: "Version Control", category: "Language" },
+  ],
+};
+
+export const familiarities: DataSetSkillsType = {
+  items: [
+    { id: 1, name: "Redux", category: "Language" },
+    { id: 2, name: "Python", category: "Framework" },
+    { id: 3, name: "Firebase", category: "Framework" },
+    { id: 4, name: "WordPress", category: "API" },
+    { id: 5, name: "TypeScript", category: "Language" },
     { id: 6, name: "Google Analytics", category: "Other" },
   ],
 };
@@ -52,6 +63,14 @@ export const projects: DataSetProjectsType = {
     // contenidos 1
     // metros2 2
     // freelance 3
+    {
+      company: 1,
+      name: "Coca-Cola Comparte una Playlist",
+      description:
+        "A marketing site for Coca-Cola where people search for their name and get a Spotify playlist with music related to his name. With geolocation language function for LATAM or Brasil.",
+      technologies: ["Nextjs", "TypeScript", "RESTAPI"],
+      link: "https://www.comparteunaplaylist.com.mx/",
+    },
     {
       company: 1,
       name: "Podcasts Awards Spotify",

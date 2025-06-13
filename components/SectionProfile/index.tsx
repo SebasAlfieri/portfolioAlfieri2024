@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import s from "./SectionProfile.module.css";
 import Image from "next/image";
 import { LineNumbers } from "@/components";
-import { experience, skills } from "@/lib/dataset";
+import { experience, familiarities, skills } from "@/lib/dataset";
 
 const SectionProfile = () => {
   return (
@@ -38,38 +38,42 @@ const SectionProfile = () => {
           <div className={s.container__data}>
             <h3>Let&apos;s make this simple</h3>
             <article className={s.container__data__knowledges}>
-              <ul>
+              <p>
+                {" "}
                 Knowledges{" "}
                 <span>
                   (<em>+2years experience</em>){" "}
                   <span className={s.equal}>=</span>
                   {" ["}
                 </span>
+              </p>
+              <ul>
                 {skills.items.map((skill, index) => (
                   <li key={skill.id}>
                     &quot;{skill.name}&quot;
                     {index < skills.items.length - 1 && <span>,</span>}
                   </li>
                 ))}
-                <span>{"]"}</span>
-              </ul>
+              </ul>{" "}
+              <span>{"]"}</span>
             </article>
             <article className={s.container__data__experience}>
-              <ul>
+              <p>
                 Experiences <span className={s.equal}>=</span>
-                <span>{" ["}</span>
+                <span>{" ["}</span>{" "}
+              </p>{" "}
+              <div>
                 {experience.items.map((item, index) => (
-                  <li
+                  <div
                     key={item.company}
                     className={s.container__data__experience__first}
                   >
+                    <span
+                      className={s.container__data__experience__first__sign}
+                    >
+                      {"{"}
+                    </span>
                     <ul>
-                      {" "}
-                      <span
-                        className={s.container__data__experience__first__sign}
-                      >
-                        {"{"}
-                      </span>
                       <li>
                         company: <span>{item.company}</span>
                       </li>
@@ -83,18 +87,33 @@ const SectionProfile = () => {
                       <li>
                         dates: <span>{item.dates}</span>
                       </li>
-                      <span
-                        className={s.container__data__experience__first__sign}
-                      >
-                        {"}"}
-                        {index < experience.items.length - 1 && <p>,</p>}
-                      </span>
                     </ul>
+                    <span
+                      className={s.container__data__experience__first__sign}
+                    >
+                      {"}"}
+                      {index < experience.items.length - 1 && <p>,</p>}
+                    </span>
                     {/* <br /> */}
-                  </li>
+                  </div>
                 ))}{" "}
                 <span>{"]"}</span>
+              </div>
+            </article>
+            <article className={s.container__data__knowledges}>
+              <p>
+                Familiar with <span className={s.equal}>=</span>{" "}
+                <span>{" ["}</span>
+              </p>
+              <ul>
+                {familiarities.items.map((skill, index) => (
+                  <li key={skill.id}>
+                    &quot;{skill.name}&quot;
+                    {index < familiarities.items.length - 1 && <span>,</span>}
+                  </li>
+                ))}
               </ul>
+              <span>{"]"}</span>
             </article>
           </div>
         </motion.div>
