@@ -6,6 +6,8 @@ import { LineNumbers } from "@/components";
 import { experience, familiarities, skills } from "@/lib/dataset";
 
 const SectionProfile = () => {
+  const years = new Date().getFullYear() - 2023;
+
   return (
     <motion.section className={s.container}>
       <a href="/CV-SEBASTIAN-ALFIERI.pdf" download className={s.container__cv}>
@@ -42,7 +44,7 @@ const SectionProfile = () => {
                 {" "}
                 Knowledges{" "}
                 <span>
-                  (<em>+2years experience</em>){" "}
+                  (<em>+{years} years experience</em>){" "}
                   <span className={s.equal}>=</span>
                   {" ["}
                 </span>

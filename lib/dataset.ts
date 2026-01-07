@@ -27,11 +27,10 @@ export const skills: DataSetSkillsType = {
 export const familiarities: DataSetSkillsType = {
   items: [
     { id: 1, name: "Redux", category: "Language" },
-    { id: 2, name: "Python", category: "Framework" },
-    { id: 3, name: "Firebase", category: "Framework" },
-    { id: 4, name: "WordPress", category: "API" },
-    { id: 5, name: "TypeScript", category: "Language" },
-    { id: 6, name: "Google Analytics", category: "Other" },
+    { id: 2, name: "Firebase", category: "Framework" },
+    { id: 3, name: "WordPress", category: "API" },
+    { id: 4, name: "TypeScript", category: "Language" },
+    { id: 5, name: "Google Analytics", category: "Other" },
   ],
 };
 
@@ -41,19 +40,19 @@ export const experience: DataSetExperienceType = {
       company: "Contenidos Digitales",
       role: "Front End Developer",
       info: "Use of Spotify API to analyze music data from users and create experiences in conjunction with major brands.",
-      dates: "November 2021 - Present",
+      dates: "November 2022 - Present",
     },
     {
       company: "Metros2Digital",
       role: "Front End Developer",
       info: "Develope of housing and plots sales apps that companies workers use to sell, administrate and advise clients.",
-      dates: "February 2022 - Present",
+      dates: "February 2023 - Present",
     },
     {
       company: "Reflejar",
       role: "Front End Developer",
-      info: "My first experience in the field, a simple landing page",
-      dates: "September 2021 - November 2021",
+      info: "My first freelance experience in the field, a simple landing page",
+      dates: "September 2022 - December 2022",
     },
   ],
 };
@@ -64,6 +63,14 @@ export const projects: DataSetProjectsType = {
     // metros2 2
     // freelance 3
     {
+      company: 2,
+      name: "Concepto Casa",
+      description:
+        "A promotional website for a premium architecture studio, focused on the design and development of exclusive, high-end residential homes.",
+      technologies: ["NextJs", "TypeScript", "Strapi", "Zapier"],
+      link: "https://www.conceptocasa.cc/",
+    },
+    {
       company: 1,
       name: "Coca-Cola Comparte una Playlist",
       description:
@@ -72,13 +79,21 @@ export const projects: DataSetProjectsType = {
       link: "https://www.comparteunaplaylist.com.mx/",
     },
     {
-      company: 1,
-      name: "Podcasts Awards Spotify",
+      company: 2,
+      name: "Qube",
       description:
-        "A phased web app for Spotify where users vote for their favorite podcasts, and winners are revealed at the end.",
-      technologies: ["Nextjs", "TypeScript"],
-      link: "https://podcastawards.byspotify.com/",
+        "A promotional landing page for Qube, focused on apartment sales",
+      technologies: ["NextJs", "TypeScript", "Strapi", "Zapier"],
+      link: "https://www.qubedesarrollos.com.ar/",
     },
+    // {
+    //   company: 1,
+    //   name: "Podcasts Awards Spotify",
+    //   description:
+    //     "A phased web app for Spotify where users vote for their favorite podcasts, and winners are revealed at the end.",
+    //   technologies: ["Nextjs", "TypeScript"],
+    //   link: "https://podcastawards.byspotify.com/",
+    // },
     {
       company: 2,
       name: "Ventas Marevera",
@@ -95,21 +110,13 @@ export const projects: DataSetProjectsType = {
       technologies: ["NextJs", "TypeScript", "Strapi", "API", "HubSpot"],
       link: "https://ventas.terralago.mx/guest",
     },
-    {
-      company: 2,
-      name: "The Corner",
-      description:
-        "A promotional landing page for The Corner, focused on apartment sales",
-      technologies: ["NextJs", "TypeScript", "Strapi", "Zapier"],
-      link: "https://www.thecorner.uy/",
-    },
-    {
-      company: 2,
-      name: "Qube",
-      description:
-        "A promotional landing page for Qube, focused on apartment sales",
-      technologies: ["NextJs", "TypeScript", "Strapi", "Zapier"],
-      link: "https://www.qubedesarrollos.com.ar/",
-    },
+    // {
+    //   company: 2,
+    //   name: "The Corner",
+    //   description:
+    //     "A promotional landing page for The Corner, focused on apartment sales",
+    //   technologies: ["NextJs", "TypeScript", "Strapi", "Zapier"],
+    //   link: "https://www.thecorner.uy/",
+    // },
   ],
 };
