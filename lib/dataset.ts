@@ -27,10 +27,13 @@ export const skills: DataSetSkillsType = {
 export const familiarities: DataSetSkillsType = {
   items: [
     { id: 1, name: "Redux", category: "Language" },
-    { id: 2, name: "Firebase", category: "Framework" },
-    { id: 3, name: "WordPress", category: "API" },
-    { id: 4, name: "TypeScript", category: "Language" },
-    { id: 5, name: "Google Analytics", category: "Other" },
+    { id: 2, name: "ReactNative", category: "Language" },
+    { id: 3, name: "Node", category: "Language" },
+    { id: 4, name: "Blazor", category: "Framework" },
+    { id: 5, name: "Firebase", category: "Framework" },
+    { id: 6, name: "WordPress", category: "API" },
+    { id: 7, name: "TypeScript", category: "Language" },
+    { id: 8, name: "Google Analytics", category: "Other" },
   ],
 };
 
